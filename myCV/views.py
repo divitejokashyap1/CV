@@ -34,4 +34,4 @@ def resume_images_view(request):
     context = {'images': image_urls}
     
     # 4) Render the template with a list of image URLs
-    return render(request, 'resume_images.html', context)
+    return render(request, 'index.html', context)
