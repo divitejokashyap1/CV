@@ -12,7 +12,7 @@ def resume_images_view(request):
         pages = convert_from_path(pdf_path)
     except Exception as e:
         # If there's an error (file not found, etc.), handle it
-        return render(request, 'resume_images.html', {
+        return render(request, 'index.html', {
             'images': [],
             'error': f"Could not open PDF: {e}"
         })
