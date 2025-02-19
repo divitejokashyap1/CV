@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume as Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .resume-image {
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Resume</h1>
+    
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% else %}
+        {% for image in images %}
+            <img src="{{ image }}" alt="Resume page" class="resume-image">
+        {% endfor %}
+    {% endif %}
+    
+</body>
+</html>
